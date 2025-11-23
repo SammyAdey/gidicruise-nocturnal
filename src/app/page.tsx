@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import Image from "next/image";
-
+import Link from "next/link";
 declare global {
 	interface Window {
 		particlesJS?: (tagId: string, params?: Record<string, unknown>) => void;
@@ -119,9 +119,12 @@ export default function Home() {
 			</div>
 			<Image className='absolute bottom-0 left-0 ' src='/images/leaves-1.png' alt='Title Card' width={363} height={24} />
 			<Image className='absolute bottom-0 right-0 ' src='/images/leaves-2.png' alt='Title Card' width={363} height={24} />
-			<div className='absolute px-10 py-3 bottom-[50px] cursor-pointer hover:bg-[#D800FF] left-1/2 z-10 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center font-bold border-[2px] text-lg'>
+			<Link
+				href=''
+				className='absolute px-10 py-3 bottom-[50px] cursor-pointer hover:bg-[#D800FF] left-1/2 z-10 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center font-bold border-[2px] text-lg'
+			>
 				Buy Tickets
-			</div>
+			</Link>
 		</div>
 	);
 }
