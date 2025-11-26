@@ -34,15 +34,15 @@ export default function Home() {
 			<div className='-translate-x-1/2 -translate-y-1/2 absolute bottom-[50px] flex md:flex-row flex-col gap-4 left-1/2 z-10'>
 				<Link
 					href='https://www.theexhibit.co/events/GXOO-2025-qu4sl167n'
-					className='px-8 md:px-10 py-3 cursor-pointer bg-[#FFD926] hover:bg-[#D13833] text-black hover:text-white flex items-center justify-center font-bold text-lg'
+					className='px-7 md:px-10 py-3 cursor-pointer bg-[#FFD926] hover:bg-[#D13833] text-black hover:text-white flex items-center justify-center font-bold text-lg'
 				>
-					Buy Ticket (N)
+					Buy Tickets (N)
 				</Link>
 				<Link
-					href='https://www.eventbrite.com/e/gidicruise-nocturnal-tickets-1975586224579?aff=oddtdtcreator'
-					className='px-8 md:px-10 py-3 cursor-pointer bg-[#FFD926] hover:bg-[#D13833] text-black hover:text-white flex items-center justify-center font-bold text-lg'
+					href='https://link.dice.fm/bc1b3c86c67d'
+					className='px-7 md:px-10 py-3 cursor-pointer bg-[#FFD926] hover:bg-[#D13833] text-black hover:text-white flex items-center justify-center font-bold text-lg'
 				>
-					Buy Ticket ($)
+					Buy Tickets (£)
 				</Link>
 			</div>
 		</div>

@@ -129,7 +129,7 @@ export default function Home() {
 					<Image className='' src='/images/ovmbr-title-card.png' alt='Title Card' width={665} height={300} />
 					<Link
 						href='/ovmbr'
-						className='cursor-pointer hover:bg-[#D800FF] flex gap-8 w-fit px-8 py-4 items-center justify-between font-bold border-[2px] text-lg'
+						className='cursor-pointer hover:bg-[#D13833] flex gap-8 w-fit px-8 py-4 items-center justify-between font-bold border-[2px] text-lg'
 					>
 						Ovmbr Cruise
 						<ArrowRight />
