@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 declare global {
 	interface Window {
 		particlesJS?: (tagId: string, params?: Record<string, unknown>) => void;
@@ -113,18 +114,30 @@ export default function Home() {
 	return (
 		<div className='relative flex min-h-screen items-center justify-center overflow-hidden bg-zinc-50 font-sans dark:bg-black'>
 			<ParticleBackground />
-			<div className='relative z-10 flex min-h-screen w-full items-center justify-center sm:items-start'>
-				<Image className='absolute top-0 h-screen' src='/images/title-card2.png' alt='Title Card' width={806} height={24} />
-				<Image className='absolute top-0 h-screen animate-pulse' src='/images/title-card-overlay.png' alt='Title Card' width={806} height={24} />
+			<div className='relative z-10 flex flex-col md:flex-row gap-12 min-h-screen w-[80%] md:w-full items-center justify-center'>
+				<div className='flex flex-col gap-4 md:gap-0 md:h-[450px] items-center justify-between'>
+					<Image className='' src='/images/nocturnal-title-card-2.png' alt='BG Image' width={665} height={350} />
+					<Link
+						href='/nocturnal'
+						className='cursor-pointer hover:bg-[#D800FF] flex gap-8 w-fit px-8 py-4 items-center justify-between font-bold border-[2px] text-lg'
+					>
+						Nocturnal
+						<ArrowRight />
+					</Link>
+				</div>
+				<div className='flex flex-col gap-4 md:gap-0 md:h-[450px] items-center justify-between'>
+					<Image className='' src='/images/ovmbr-title-card.png' alt='Title Card' width={665} height={300} />
+					<Link
+						href='/ovmbr'
+						className='cursor-pointer hover:bg-[#D800FF] flex gap-8 w-fit px-8 py-4 items-center justify-between font-bold border-[2px] text-lg'
+					>
+						Ovmbr Cruise
+						<ArrowRight />
+					</Link>
+				</div>
 			</div>
-			<Image className='absolute bottom-0 left-0 ' src='/images/leaves-1.png' alt='Title Card' width={363} height={24} />
-			<Image className='absolute bottom-0 right-0 ' src='/images/leaves-2.png' alt='Title Card' width={363} height={24} />
-			<Link
-				href=''
-				className='absolute px-10 py-3 bottom-[50px] cursor-pointer hover:bg-[#D800FF] left-1/2 z-10 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center font-bold border-[2px] text-lg'
-			>
-				Buy Tickets
-			</Link>
+			<Image className='absolute -bottom-10 md:bottom-0 -left-10 md:left-0 ' src='/images/leaves-1.png' alt='Title Card' width={363} height={24} />
+			<Image className='absolute -bottom-10 md:bottom-0 -right-10 md:right-0 ' src='/images/leaves-2.png' alt='Title Card' width={363} height={24} />
 		</div>
 	);
 }
