@@ -131,7 +131,7 @@ export default function Home() {
             onClick={() => play()}
             className="cursor-pointer hover:bg-[#D800FF] flex gap-8 w-fit px-8 py-4 items-center justify-between font-bold border-[2px] text-lg"
           >
-            Nocturnal
+            Own the night at NOCTURNAL
             <ArrowRight />
           </Link>
         </div>
@@ -142,10 +142,10 @@ export default function Home() {
               alt="gidicruise logo"
               width={200}
               height={200}
-			  className="absolute w-[150px] md:w-auto top-5 left-0 md:top-9 md:left-4"
+              className="absolute w-[150px] md:w-auto top-5 left-0 md:top-9 md:left-4"
             />
             <Image
-            //   className="border border-red-400"
+              //   className="border border-red-400"
               src="/images/ovmbr-title-card.png"
               alt="Title Card"
               width={665}
@@ -157,7 +157,7 @@ export default function Home() {
             onClick={() => play()}
             className="cursor-pointer hover:bg-[#D13833] flex gap-8 w-fit px-8 py-4 items-center justify-between font-bold border-[2px] text-lg"
           >
-            Ovmbr Cruise
+            Hop aboard the OVMBR CRUISE
             <ArrowRight />
           </Link>
         </div>
