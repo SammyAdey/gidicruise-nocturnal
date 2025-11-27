@@ -136,13 +136,22 @@ export default function Home() {
           </Link>
         </div>
         <div className="flex flex-col gap-4 md:gap-0 md:h-[450px] items-center justify-between">
-          <Image
-            className=""
-            src="/images/ovmbr-title-card.png"
-            alt="Title Card"
-            width={665}
-            height={300}
-          />
+          <div className="flex flex-col relative">
+            <Image
+              src="/images/gidi-logo.png"
+              alt="gidicruise logo"
+              width={200}
+              height={200}
+			  className="absolute w-[150px] md:w-auto top-5 left-0 md:top-9 md:left-4"
+            />
+            <Image
+            //   className="border border-red-400"
+              src="/images/ovmbr-title-card.png"
+              alt="Title Card"
+              width={665}
+              height={300}
+            />
+          </div>
           <Link
             href="/ovmbr"
             onClick={() => play()}
