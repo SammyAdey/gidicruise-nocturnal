@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { useAudio } from "@/components/AudioProvider";
 declare global {
 	interface Window {
 		particlesJS?: (tagId: string, params?: Record<string, unknown>) => void;
@@ -111,33 +112,61 @@ const ParticleBackground = () => {
 };
 
 export default function Home() {
-	return (
-		<div className='relative flex min-h-screen items-center justify-center overflow-hidden bg-zinc-50 font-sans dark:bg-black'>
-			<ParticleBackground />
-			<div className='relative z-10 flex flex-col md:flex-row gap-12 min-h-screen w-[80%] md:w-full items-center justify-center'>
-				<div className='flex flex-col gap-4 md:gap-0 md:h-[450px] items-center justify-between'>
-					<Image className='' src='/images/nocturnal-title-card-2.png' alt='BG Image' width={665} height={350} />
-					<Link
-						href='/nocturnal'
-						className='cursor-pointer hover:bg-[#D800FF] flex gap-8 w-fit px-8 py-4 items-center justify-between font-bold border-[2px] text-lg'
-					>
-						Nocturnal
-						<ArrowRight />
-					</Link>
-				</div>
-				<div className='flex flex-col gap-4 md:gap-0 md:h-[450px] items-center justify-between'>
-					<Image className='' src='/images/ovmbr-title-card.png' alt='Title Card' width={665} height={300} />
-					<Link
-						href='/ovmbr'
-						className='cursor-pointer hover:bg-[#D13833] flex gap-8 w-fit px-8 py-4 items-center justify-between font-bold border-[2px] text-lg'
-					>
-						Ovmbr Cruise
-						<ArrowRight />
-					</Link>
-				</div>
-			</div>
-			<Image className='absolute -bottom-10 md:bottom-0 -left-10 md:left-0 ' src='/images/leaves-1.png' alt='Title Card' width={363} height={24} />
-			<Image className='absolute -bottom-10 md:bottom-0 -right-10 md:right-0 ' src='/images/leaves-2.png' alt='Title Card' width={363} height={24} />
-		</div>
-	);
+  const { play } = useAudio();
+
+  return (
+    <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-zinc-50 font-sans dark:bg-black">
+      <ParticleBackground />
+      <div className="relative z-10 flex flex-col md:flex-row gap-12 min-h-screen w-[80%] md:w-full items-center justify-center">
+        <div className="flex flex-col gap-4 md:gap-0 md:h-[450px] items-center justify-between">
+          <Image
+            className=""
+            src="/images/nocturnal-title-card-2.png"
+            alt="BG Image"
+            width={665}
+            height={350}
+          />
+          <Link
+            href="/nocturnal"
+            onClick={() => play()}
+            className="cursor-pointer hover:bg-[#D800FF] flex gap-8 w-fit px-8 py-4 items-center justify-between font-bold border-[2px] text-lg"
+          >
+            Nocturnal
+            <ArrowRight />
+          </Link>
+        </div>
+        <div className="flex flex-col gap-4 md:gap-0 md:h-[450px] items-center justify-between">
+          <Image
+            className=""
+            src="/images/ovmbr-title-card.png"
+            alt="Title Card"
+            width={665}
+            height={300}
+          />
+          <Link
+            href="/ovmbr"
+            onClick={() => play()}
+            className="cursor-pointer hover:bg-[#D13833] flex gap-8 w-fit px-8 py-4 items-center justify-between font-bold border-[2px] text-lg"
+          >
+            Ovmbr Cruise
+            <ArrowRight />
+          </Link>
+        </div>
+      </div>
+      <Image
+        className="absolute -bottom-10 md:bottom-0 -left-10 md:left-0 "
+        src="/images/leaves-1.png"
+        alt="Title Card"
+        width={363}
+        height={24}
+      />
+      <Image
+        className="absolute -bottom-10 md:bottom-0 -right-10 md:right-0 "
+        src="/images/leaves-2.png"
+        alt="Title Card"
+        width={363}
+        height={24}
+      />
+    </div>
+  );
 }
