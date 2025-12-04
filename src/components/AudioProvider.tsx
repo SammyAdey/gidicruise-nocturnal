@@ -41,7 +41,7 @@ export const AudioProvider = ({ children }: { children: ReactNode }) => {
     if (pathname?.includes("/nocturnal")) {
       return "/audio/wuse2.mp3";
     } else if (pathname?.includes("/ovmbr")) {
-      return "/audio/fun.mp3";
+      return "/audio/odeal.mp3";
     }
     return "";
   }, [pathname]);
