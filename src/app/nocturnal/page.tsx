@@ -132,6 +132,11 @@ export default function Home() {
 				>
 					Buy Tickets (£)
 				</Link>
+				<button
+					className='px-7 md:px-10 py-3 cursor-pointer hover:bg-[#D800FF] border-[2px] hover:text-black flex items-center justify-center font-bold text-lg'
+				>
+					Table Packages
+				</button>
 			</div>
 		</div>
 	);
