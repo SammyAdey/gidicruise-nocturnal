@@ -117,7 +117,7 @@ const ParticleBackground = () => {
   );
 };
 
-const PASSWORD = "GCXOV";
+const PASSWORD = "NIGHTSINTHESUN";
 
 export default function Home() {
   const [isAuthenticated, setIsAuthenticated] = useState(() => {
