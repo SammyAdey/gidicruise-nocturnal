@@ -232,7 +232,7 @@ export default function Home() {
           Buy Tickets (£)
         </Link>
         <Link
-          href="#"
+          href="https://paystack.shop/ovmbr-cruise"
           className="px-7 md:px-10 py-3 cursor-pointer bg-[#FFD926] hover:bg-[#D13833] text-black hover:text-white flex items-center justify-center font-bold text-lg"
         >
           Table Packages
