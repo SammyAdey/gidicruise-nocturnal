@@ -229,7 +229,7 @@ export default function Home() {
           href="https://link.dice.fm/bc1b3c86c67d"
           className="px-7 md:px-10 py-3 cursor-pointer bg-[#FFD926] hover:bg-[#D13833] text-black hover:text-white flex items-center justify-center font-bold text-lg"
         >
-          Buy Tickets (£)
+          Buy Tickets (£/$)
         </Link>
         <Link
           href="https://paystack.shop/ovmbr-cruise"
