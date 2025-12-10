@@ -6,109 +6,115 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { useAudio } from "@/components/AudioProvider";
 declare global {
-	interface Window {
-		particlesJS?: (tagId: string, params?: Record<string, unknown>) => void;
-		pJSDom?: Array<{
-			pJS: {
-				fn: {
-					vendors: {
-						destroy?: () => void;
-					};
-				};
-			};
-		}>;
-	}
+  interface Window {
+    particlesJS?: (tagId: string, params?: Record<string, unknown>) => void;
+    pJSDom?: Array<{
+      pJS: {
+        fn: {
+          vendors: {
+            destroy?: () => void;
+          };
+        };
+      };
+    }>;
+  }
 }
 
 const PARTICLE_OPTIONS: Record<string, unknown> = {
-	particles: {
-		number: {
-			value: 120,
-			density: {
-				enable: true,
-				value_area: 800,
-			},
-		},
-		color: {
-			value: ["#ffffff", "#a5b4fc", "#c7d2fe"],
-		},
-		shape: {
-			type: "circle",
-			stroke: {
-				width: 0,
-			},
-		},
-		opacity: {
-			value: 0.6,
-			random: true,
-			anim: {
-				enable: true,
-				speed: 0.6,
-				opacity_min: 0.2,
-				sync: false,
-			},
-		},
-		size: {
-			value: 2.5,
-			random: true,
-			anim: {
-				enable: true,
-				speed: 2,
-				size_min: 0.8,
-				sync: false,
-			},
-		},
-		line_linked: {
-			enable: false,
-		},
-		move: {
-			enable: true,
-			speed: 0.6,
-			direction: "none",
-			random: true,
-			straight: false,
-			out_mode: "out",
-			bounce: false,
-		},
-	},
-	interactivity: {
-		detect_on: "canvas",
-		events: {
-			onhover: {
-				enable: false,
-				mode: "repulse",
-			},
-			onclick: {
-				enable: false,
-			},
-			resize: true,
-		},
-	},
-	retina_detect: true,
+  particles: {
+    number: {
+      value: 120,
+      density: {
+        enable: true,
+        value_area: 800,
+      },
+    },
+    color: {
+      value: ["#ffffff", "#a5b4fc", "#c7d2fe"],
+    },
+    shape: {
+      type: "circle",
+      stroke: {
+        width: 0,
+      },
+    },
+    opacity: {
+      value: 0.6,
+      random: true,
+      anim: {
+        enable: true,
+        speed: 0.6,
+        opacity_min: 0.2,
+        sync: false,
+      },
+    },
+    size: {
+      value: 2.5,
+      random: true,
+      anim: {
+        enable: true,
+        speed: 2,
+        size_min: 0.8,
+        sync: false,
+      },
+    },
+    line_linked: {
+      enable: false,
+    },
+    move: {
+      enable: true,
+      speed: 0.6,
+      direction: "none",
+      random: true,
+      straight: false,
+      out_mode: "out",
+      bounce: false,
+    },
+  },
+  interactivity: {
+    detect_on: "canvas",
+    events: {
+      onhover: {
+        enable: false,
+        mode: "repulse",
+      },
+      onclick: {
+        enable: false,
+      },
+      resize: true,
+    },
+  },
+  retina_detect: true,
 };
 
 const ParticleBackground = () => {
-	useEffect(() => {
-		let canceled = false;
+  useEffect(() => {
+    let canceled = false;
 
-		const initParticles = async () => {
-			await import("particles.js");
-			if (canceled) return;
-			window.particlesJS?.("particles-background", PARTICLE_OPTIONS);
-		};
+    const initParticles = async () => {
+      await import("particles.js");
+      if (canceled) return;
+      window.particlesJS?.("particles-background", PARTICLE_OPTIONS);
+    };
 
-		initParticles();
+    initParticles();
 
-		return () => {
-			canceled = true;
-			window.pJSDom?.forEach((instance) => {
-				instance?.pJS?.fn?.vendors?.destroy?.();
-			});
-			window.pJSDom = [];
-		};
-	}, []);
+    return () => {
+      canceled = true;
+      window.pJSDom?.forEach((instance) => {
+        instance?.pJS?.fn?.vendors?.destroy?.();
+      });
+      window.pJSDom = [];
+    };
+  }, []);
 
-	return <div id='particles-background' className='pointer-events-none absolute inset-0' aria-hidden='true' />;
+  return (
+    <div
+      id="particles-background"
+      className="pointer-events-none absolute inset-0"
+      aria-hidden="true"
+    />
+  );
 };
 
 export default function Home() {
@@ -129,10 +135,12 @@ export default function Home() {
           <Link
             href="/nocturnal"
             onClick={() => play()}
-            className="cursor-pointer hover:bg-[#D800FF] flex gap-8 w-fit px-8 py-4 items-center justify-between font-bold border-[2px] text-lg"
+            className="cursor-pointer bg-white/10 backdrop-blur-sm hover:bg-[#D800FF] border-2 border-white hover:border-[#D800FF] text-white hover:text-black flex gap-4 md:gap-8 w-full md:w-fit px-4 md:px-8 py-4 md:py-4 min-h-[48px] items-center justify-center md:justify-between font-bold text-base md:text-lg rounded-lg transition-all duration-300 ease-in-out active:scale-95 shadow-lg hover:shadow-xl"
           >
-            Own the night at NOCTURNAL
-            <ArrowRight />
+            <span className="text-sm md:text-base text-left">
+              Own the night at NOCTURNAL
+            </span>
+            <ArrowRight className="-rotate-[15deg]" />
           </Link>
         </div>
         <div className="flex flex-col gap-4 md:gap-0 md:h-[450px] items-center justify-between">
@@ -155,10 +163,12 @@ export default function Home() {
           <Link
             href="/ovmbr"
             onClick={() => play()}
-            className="cursor-pointer hover:bg-[#D13833] flex gap-8 w-fit px-8 py-4 items-center justify-between font-bold border-[2px] text-lg"
+            className="cursor-pointer bg-white/10 backdrop-blur-sm hover:bg-[#D13833] border-2 border-white hover:border-[#D13833] text-white hover:text-white flex gap-4 md:gap-8 w-full md:w-fit px-4 md:px-8 py-4 md:py-4 min-h-[48px] items-center justify-center md:justify-between font-bold text-base md:text-lg rounded-lg transition-all duration-300 ease-in-out active:scale-95 shadow-lg hover:shadow-xl"
           >
-            Hop aboard the OVMBR CRUISE
-            <ArrowRight />
+            <span className="text-sm md:text-base text-left">
+              Hop aboard the OVMBR CRUISE
+            </span>
+            <ArrowRight className="-rotate-[15deg]" />
           </Link>
         </div>
       </div>
