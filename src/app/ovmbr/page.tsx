@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
+// random comment
+
 // Particle background code commented out - was only used in password form
 // declare global {
 //   interface Window {
@@ -11,6 +13,7 @@ import { ArrowRight } from "lucide-react";
 //     pJSDom?: Array<{
 //       pJS: {
 //         fn: {
+
 //           vendors: {
 //             destroy?: () => void;
 //           };
