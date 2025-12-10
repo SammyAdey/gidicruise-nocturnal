@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 // Particle background code commented out - was only used in password form
 // declare global {
@@ -220,24 +221,27 @@ export default function Home() {
         width={363}
         height={24}
       />
-      <div className="-translate-x-1/2 -translate-y-1/2 absolute bottom-[50px] flex md:flex-row flex-col gap-4 left-1/2 z-10">
+      <div className="-translate-x-1/2 -translate-y-1/2 absolute bottom-[50px] flex md:flex-row flex-col gap-4 left-1/2 z-10 w-full max-w-md md:max-w-none px-4 md:px-0 items-center justify-center">
         <Link
           href="https://www.theexhibit.co/events/GXOO-2025-qu4sl167n"
-          className="px-7 md:px-10 py-3 cursor-pointer bg-[#FFD926] hover:bg-[#D13833] text-black hover:text-white flex items-center justify-center font-bold text-lg"
+          className="w-full md:w-auto px-6 md:px-10 py-4 md:py-3 min-h-[48px] cursor-pointer bg-[#FFD926] hover:bg-[#D13833] text-black hover:text-white flex items-center justify-center gap-2 font-bold text-base md:text-lg rounded-lg transition-all duration-300 ease-in-out active:scale-95 shadow-lg hover:shadow-xl"
         >
           Buy Tickets (N)
+          <ArrowRight className="-rotate-[15deg]" />
         </Link>
         <Link
           href="https://link.dice.fm/bc1b3c86c67d"
-          className="px-7 md:px-10 py-3 cursor-pointer bg-[#FFD926] hover:bg-[#D13833] text-black hover:text-white flex items-center justify-center font-bold text-lg"
+          className="w-full md:w-auto px-6 md:px-10 py-4 md:py-3 min-h-[48px] cursor-pointer bg-[#FFD926] hover:bg-[#D13833] text-black hover:text-white flex items-center justify-center gap-2 font-bold text-base md:text-lg rounded-lg transition-all duration-300 ease-in-out active:scale-95 shadow-lg hover:shadow-xl"
         >
           Buy Tickets (£/$)
+          <ArrowRight className="-rotate-[15deg]" />
         </Link>
         <Link
           href="https://paystack.shop/ovmbr-cruise"
-          className="px-7 md:px-10 py-3 cursor-pointer bg-[#FFD926] hover:bg-[#D13833] text-black hover:text-white flex items-center justify-center font-bold text-lg"
+          className="w-full md:w-auto px-6 md:px-10 py-4 md:py-3 min-h-[48px] cursor-pointer bg-[#FFD926] hover:bg-[#D13833] text-black hover:text-white flex items-center justify-center gap-2 font-bold text-base md:text-lg rounded-lg transition-all duration-300 ease-in-out active:scale-95 shadow-lg hover:shadow-xl"
         >
           Table Packages
+          <ArrowRight className="-rotate-[15deg]" />
         </Link>
       </div>
     </div>

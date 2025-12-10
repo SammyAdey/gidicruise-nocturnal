@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 declare global {
 	interface Window {
 		particlesJS?: (tagId: string, params?: Record<string, unknown>) => void;
@@ -110,35 +111,62 @@ const ParticleBackground = () => {
 };
 
 export default function Home() {
-	return (
-		<div className='relative flex min-h-screen items-center justify-center overflow-hidden bg-zinc-50 font-sans dark:bg-black'>
-			<ParticleBackground />
-			<div className='relative z-10 flex min-h-screen w-[80%] md:w-full items-center justify-center sm:items-start'>
-				<Image className='absolute top-30 md:h-screen' src='/images/title-card2.png' alt='Title Card' width={806} height={24} />
-				<Image className='absolute top-30 md:h-screen animate-pulse' src='/images/title-card-overlay.png' alt='Title Card' width={806} height={24} />
-			</div>
-			<Image className='absolute bottom-0 left-0 ' src='/images/leaves-1.png' alt='Title Card' width={363} height={24} />
-			<Image className='absolute bottom-0 right-0 ' src='/images/leaves-2.png' alt='Title Card' width={363} height={24} />
-			<div className='-translate-x-1/2 -translate-y-1/2 absolute bottom-[50px] left-1/2 z-10 flex md:flex-row flex-col gap-4'>
-				<Link
-					href='https://www.theexhibit.co/events/GN-2025-q7jpuv5fv'
-					className='px-7 md:px-10 py-3 cursor-pointer hover:bg-[#D800FF] border-[2px] hover:text-black flex items-center justify-center font-bold text-lg'
-				>
-					Buy Tickets (N)
-				</Link>
-				<Link
-					href='https://www.eventbrite.com/e/gidicruise-nocturnal-tickets-1975586224579?aff=oddtdtcreator'
-					className='px-7 md:px-10 py-3 cursor-pointer hover:bg-[#D800FF] border-[2px] hover:text-black flex items-center justify-center font-bold text-lg'
-				>
-					Buy Tickets (£/$)
-				</Link>
-				<Link
-					href='https://paystack.shop/gidicruise-nocturnal'
-					className='px-7 md:px-10 py-3 cursor-pointer hover:bg-[#D800FF] border-[2px] hover:text-black flex items-center justify-center font-bold text-lg'
-				>
-					Table Packages
-				</Link>
-			</div>
-		</div>
-	);
+  return (
+    <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-zinc-50 font-sans dark:bg-black">
+      <ParticleBackground />
+      <div className="relative z-10 flex min-h-screen w-[80%] md:w-full items-center justify-center sm:items-start">
+        <Image
+          className="absolute top-30 md:h-screen"
+          src="/images/title-card2.png"
+          alt="Title Card"
+          width={806}
+          height={24}
+        />
+        <Image
+          className="absolute top-30 md:h-screen animate-pulse"
+          src="/images/title-card-overlay.png"
+          alt="Title Card"
+          width={806}
+          height={24}
+        />
+      </div>
+      <Image
+        className="absolute bottom-0 left-0 "
+        src="/images/leaves-1.png"
+        alt="Title Card"
+        width={363}
+        height={24}
+      />
+      <Image
+        className="absolute bottom-0 right-0 "
+        src="/images/leaves-2.png"
+        alt="Title Card"
+        width={363}
+        height={24}
+      />
+      <div className="-translate-x-1/2 -translate-y-1/2 absolute bottom-[50px] left-1/2 z-10 flex md:flex-row flex-col gap-4 w-full max-w-md md:max-w-none px-4 md:px-0 items-center justify-center">
+        <Link
+          href="https://www.theexhibit.co/events/GN-2025-q7jpuv5fv"
+          className="w-full md:w-auto px-6 md:px-10 py-4 md:py-3 min-h-[48px] cursor-pointer bg-white/10 backdrop-blur-sm hover:bg-[#D800FF] border-2 border-white hover:border-[#D800FF] text-white hover:text-black flex items-center justify-center gap-2 font-bold text-base md:text-lg rounded-lg transition-all duration-300 ease-in-out active:scale-95 shadow-lg hover:shadow-xl"
+        >
+          Buy Tickets (N)
+          <ArrowRight className="-rotate-[15deg]" />
+        </Link>
+        <Link
+          href="https://www.eventbrite.com/e/gidicruise-nocturnal-tickets-1975586224579?aff=oddtdtcreator"
+          className="w-full md:w-auto px-6 md:px-10 py-4 md:py-3 min-h-[48px] cursor-pointer bg-white/10 backdrop-blur-sm hover:bg-[#D800FF] border-2 border-white hover:border-[#D800FF] text-white hover:text-black flex items-center justify-center gap-2 font-bold text-base md:text-lg rounded-lg transition-all duration-300 ease-in-out active:scale-95 shadow-lg hover:shadow-xl"
+        >
+          Buy Tickets (£/$)
+          <ArrowRight className="-rotate-[15deg]" />
+        </Link>
+        <Link
+          href="https://paystack.shop/gidicruise-nocturnal"
+          className="w-full md:w-auto px-6 md:px-10 py-4 md:py-3 min-h-[48px] cursor-pointer bg-white/10 backdrop-blur-sm hover:bg-[#D800FF] border-2 border-white hover:border-[#D800FF] text-white hover:text-black flex items-center justify-center gap-2 font-bold text-base md:text-lg rounded-lg transition-all duration-300 ease-in-out active:scale-95 shadow-lg hover:shadow-xl"
+        >
+          Table Packages
+          <ArrowRight className="-rotate-[15deg]" />
+        </Link>
+      </div>
+    </div>
+  );
 }
